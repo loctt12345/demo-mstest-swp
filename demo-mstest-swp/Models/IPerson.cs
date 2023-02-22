@@ -8,5 +8,6 @@ namespace demo_mstest_swp.Models
 {
     public interface IPerson
     {
+        void Show();
     }
 }
