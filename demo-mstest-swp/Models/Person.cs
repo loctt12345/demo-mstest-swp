@@ -10,19 +10,19 @@ namespace demo_mstest_swp.Models
     class Person : IPerson
     {
         public string Name { get; set; }
-        public string DateOfBirth { get; set; }
+        public int Age { get; set; }
         public string Address { get; set; }
 
-        public Person(string name, string dateOfBirth, string address)
+        public Person(string name, int age, string address)
         {
             Name = name;
-            DateOfBirth = dateOfBirth;
+            Age = age;
             Address = address;
         }
 
         public void Show()
         {
-            Console.WriteLine($"Name: {Name} - DateOfBirth: {DateOfBirth} - Address: {Address}");
+            Console.WriteLine($"Name: {Name} - Age: {Age} - Address: {Address}");
         }
     }
 }

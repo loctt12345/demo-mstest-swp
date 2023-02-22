@@ -9,8 +9,8 @@ namespace demo_mstest_swp.Models
     class Student : Person
     {
         public string Course { get; set; }
-        public Student (string name, string dateOfBirth, string address, string course)
-            : base(name, dateOfBirth, address)
+        public Student (string name, int age, string address, string course)
+            : base(name, age, address)
         {
             Course = course;
         }
