@@ -6,18 +6,36 @@ using System.Threading.Tasks;
 
 namespace demo_mstest_swp.Models
 {
-    class Student : Person
+    public class Student
     {
-        public string Course { get; set; }
-        public Student (string name, int age, string address, string course)
-            : base(name, age, address)
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Major { get; set; }
+        public double GPA { get; set; }
+        public List<string> EnrolledCourses { get; set; }
+
+        public Student(string name, int age, string major, double gpa)
         {
-            Course = course;
+            Name = name;
+            Age = age;
+            Major = major;
+            GPA = gpa;
+            EnrolledCourses = new List<string>();
         }
-        public new void Show()
+
+        public void AddCourse(string course)
         {
-            base.Show();
-            Console.WriteLine($"Course: {Course}");
+            EnrolledCourses.Add(course);
+        }
+
+        public void RemoveCourse(string course)
+        {
+            EnrolledCourses.Remove(course);
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}\nAge: {Age}\nMajor: {Major}\nGPA: {GPA}\nEnrolled Courses: {string.Join(", ", EnrolledCourses)}";
         }
     }
 }
