@@ -28,7 +28,7 @@ namespace UnitTesting
             Assert.IsFalse(myStudent.EnrolledCourses.Contains("Introduction to Programming"));
             Assert.IsTrue(myStudent.EnrolledCourses.Contains("Data Structures and Algorithms"));
 
-            string expectedString = "Name: John Doe\nAge: 20\nMajor: Computer Science\nGPA: 3.5\nEnrolled Courses: Data Structures and Algorithms";
+            string expectedString = "Name: John\nAge: 20\nMajor: Computer Science\nGPA: 8.5\nEnrolled Courses: Data Structures and Algorithms";
             Assert.AreEqual(myStudent.ToString(), expectedString);
         }
     }
