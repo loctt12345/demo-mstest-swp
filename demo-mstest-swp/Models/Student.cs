@@ -22,6 +22,7 @@ namespace demo_mstest_swp.Models
             GPA = gpa;
             EnrolledCourses = new List<string>();
         }
+        public Student() { }
 
         public void AddCourse(string course)
         {
@@ -36,6 +37,29 @@ namespace demo_mstest_swp.Models
         public override string ToString()
         {
             return $"Name: {Name}\nAge: {Age}\nMajor: {Major}\nGPA: {GPA}\nEnrolled Courses: {string.Join(", ", EnrolledCourses)}";
+        }
+
+        public string CheckGPA(double gpa)
+        {
+            if(gpa <= 0 || gpa >= 10) {
+                throw new Exception("Invalid gpa. GPA must be between 0 .. 10!");
+            } 
+            if(gpa < 6) {
+                return "GPA: " + gpa + " is average student";
+            }
+            if(gpa > 6 && gpa < 8) {
+                return "GPA: " + gpa + " is good student";
+            }
+
+            return "GPA: " + gpa + " is excellent student";
+        }
+
+        public int GetAge(int age) 
+        { 
+            if(age < 6 || age > 18) {
+                throw new ArgumentException("Age of student between 6 .... 18");
+            } 
+            return age;
         }
     }
 }
