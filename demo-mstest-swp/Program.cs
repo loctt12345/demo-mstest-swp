@@ -6,8 +6,8 @@ namespace demo_mstest_swp
         static void Main(string[] args)
         {
             //Test
-            int rs = MathUtils.GetSumNFirstNum(10);
-            Console.Write("Sum of 10 first natural number: " + rs);
+            bool rs = MathUtils.IsPalindrome(19391);
+            Console.WriteLine(rs);
         }
     }
 }
