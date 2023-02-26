@@ -23,32 +23,6 @@ namespace demo_mstest_swp
             }
             return sum;
         }
-        /*
-        * Find which numbers appear once in array
-        * Input: array of int
-        * Output: array of n which appear once in the input array
-        * Constraint:
-         1 <= arr.length <= 3 * 10^4
-            -3 * 10^4 <= arr[i] <= 3 * 10^4 */
-        public static int[] GetElementOnceInArray(int[] arr)
-        {
-            List<int> arrResult = new List<int>();
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int count = 0;
-                for (int j = 0; j < arr.Length; j++)
-                {
-                    if (arr[i] == arr[j]) count++;
-                }
-                if (count == 1)
-                {
-                    arrResult.Add(arr[i]);
-
-                }
-            }
-            return arrResult.ToArray();
-        }
-
 
         /*Given an integer n, return true if n is a palindrome, and false otherwise. 
          * An integer is a palindrome when it reads the same forward and backward.
