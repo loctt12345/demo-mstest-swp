@@ -1,3 +1,5 @@
+[![.NET](https://github.com/loctt12345/demo-mstest-swp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/loctt12345/demo-mstest-swp/actions/workflows/dotnet.yml)
+
 # Welcome to Demo-MSTest-SWT Repository
 ### This project for Software Testing (SWT) subject.
 ### This project is created by Lo Hung Khanh, Phan Nhat Tan, Tran Thien Loc, Nguyen Chanh Nhat Minh, Huynh Nhat Thien Hoang, Nguyen Thanh Nhan.
