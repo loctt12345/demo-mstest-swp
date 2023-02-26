@@ -22,7 +22,7 @@ namespace UnitTesting
         [TestMethod]
         public void GetTitleWithGPA_GPAFromNineToTen_ReturnAverage()
         {
-            var student = new Student("Loc", 21, "Software Engineer", 4.4);
+            var student = new Student("Loc", 21, "Software Engineer", 6.5);
 
             var expectedValue = "Average";
 
