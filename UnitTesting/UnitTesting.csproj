@@ -15,4 +15,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\demo-mstest-swp\demo-mstest-swp.csproj" />
+  </ItemGroup>
+
 </Project>
