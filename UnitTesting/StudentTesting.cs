@@ -5,31 +5,64 @@ namespace UnitTesting
     [TestClass]
     public class StudentTesting
     {
+
+        // Unit test for method GetTitleWithGPA
         [TestMethod]
-        public void TestMethod1()
+        public void GetTitleWithGPA_GPAFromNineToTen_ReturnExcellent()
         {
-            Student myStudent = new Student("John", 20, "Computer Science", 8.5);
-            Assert.AreEqual(myStudent.Name, "John");
-            Assert.AreEqual(myStudent.Age, 20);
-            Assert.AreEqual(myStudent.Major, "Computer Science");
-            Assert.AreEqual(myStudent.GPA, 8.5);
-            Assert.AreEqual(myStudent.EnrolledCourses.Count, 0);
+            var student = new Student("Loc", 21, "Software Engineer", 9.5);
 
-            myStudent.AddCourse("Introduction to Programming");
-            myStudent.AddCourse("Data Structures and Algorithms");
+            var expectedValue = "Excellent";
 
-            Assert.AreEqual(myStudent.EnrolledCourses.Count, 2);
-            Assert.IsTrue(myStudent.EnrolledCourses.Contains("Introduction to Programming"));
-            Assert.IsTrue(myStudent.EnrolledCourses.Contains("Data Structures and Algorithms"));
+            var acualValue = student.GetTitleWithGPA();
 
-            myStudent.RemoveCourse("Introduction to Programming");
+            Assert.AreEqual(expectedValue, acualValue);
+        }
 
-            Assert.AreEqual(myStudent.EnrolledCourses.Count, 1);
-            Assert.IsFalse(myStudent.EnrolledCourses.Contains("Introduction to Programming"));
-            Assert.IsTrue(myStudent.EnrolledCourses.Contains("Data Structures and Algorithms"));
+        [TestMethod]
+        public void GetTitleWithGPA_GPAFromNineToTen_ReturnAverage()
+        {
+            var student = new Student("Loc", 21, "Software Engineer", 4.4);
 
-            string expectedString = "Name: John\nAge: 20\nMajor: Computer Science\nGPA: 8.5\nEnrolled Courses: Data Structures and Algorithms";
-            Assert.AreEqual(myStudent.ToString(), expectedString);
+            var expectedValue = "Average";
+
+            var acualValue = student.GetTitleWithGPA();
+
+            Assert.AreEqual(expectedValue, acualValue);
+        }
+
+        [TestMethod]
+        public void GetTitleWithGPA_GreaterThanTen_ThrowsException()
+        {
+            var student1 = new Student("Loc", 21, "Software Engineer", 11.0);
+            Assert.ThrowsException<FormatException>(() => student1.GetTitleWithGPA());
+
+            var student2 = new Student("Loc", 21, "Software Engineer", 10.3);
+            Assert.ThrowsException<FormatException>(() => student2.GetTitleWithGPA());
+        }
+
+        // Unit test for method ConvertGPAOutOfFourRoundToTens
+
+        [TestMethod]
+        public void ConvertGPAOutOfFourRoundToTens_RightFormatGPA_ReturnGPAOutOfFour()
+        {
+            var student = new Student("Loc", 21, "Software Engineer", 7.0);
+
+            var expectedValue = 2.80;
+
+            var actualValue = student.ConvertGPAOutOfFourRoundToTens();
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestMethod]
+        public void ConvertGPAOutOfFourRoundToTens_NegativeGPA_ThrowsException()
+        {
+            var student1 = new Student("Loc", 21, "Software Engineer", -1.0);
+            Assert.ThrowsException<FormatException>(() => student1.ConvertGPAOutOfFourRoundToTens());
+
+            var student2 = new Student("Loc", 21, "Software Engineer", -20);
+            Assert.ThrowsException<FormatException>(() => student2.ConvertGPAOutOfFourRoundToTens());
         }
     }
 }
