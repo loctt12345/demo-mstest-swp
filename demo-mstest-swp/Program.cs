@@ -6,7 +6,7 @@ namespace demo_mstest_swp
         static void Main(string[] args)
         {
             //Test
-            bool rs = MathUtils.IsPalindrome(19391);
+            int rs = MathUtils.GetSumNFirstNum(1);
             Console.WriteLine(rs);
         }
     }
