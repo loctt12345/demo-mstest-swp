@@ -21,7 +21,7 @@ namespace UnitTesting
 
 
         // Unit test for method IsPalindrome 
-        /*public static IEnumerable<object[]> PalindromeData
+        public static IEnumerable<object[]> PalindromeData
         {
             get
             {
@@ -29,7 +29,7 @@ namespace UnitTesting
                 {
                     new object[] {1, true},
                     new object[] {21112, true},
-                    new object[] {334433, true},
+                    new object[] {334431, true},
                     new object[] {3441443, true},
                     new object[] {47, false},
                     new object[] {2012323, false},
@@ -37,7 +37,7 @@ namespace UnitTesting
                     new object[] {3441441, false},
                 };
             }
-        }*/
+        }
 
         public static IEnumerable<object[]> GetPalindromeData()
         {
@@ -55,7 +55,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        [DynamicData(nameof(GetPalindromeData), DynamicDataSourceType.Method)]
+        [DynamicData(nameof(PalindromeData), DynamicDataSourceType.Property)]
         public void IsPalindrome_NaturalNumber_ReturnRight(int n, bool expectedValue)
         {
             bool actualValue = MathUtils.IsPalindrome(n);
