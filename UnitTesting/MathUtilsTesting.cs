@@ -21,7 +21,7 @@ namespace UnitTesting
 
 
         // Unit test for method IsPalindrome 
-        public static IEnumerable<object[]> PalindromeData
+        /*public static IEnumerable<object[]> PalindromeData
         {
             get
             {
@@ -37,7 +37,7 @@ namespace UnitTesting
                     new object[] {3441441, false},
                 };
             }
-        }
+        }*/
 
         public static IEnumerable<object[]> GetPalindromeData()
         {
