@@ -55,7 +55,7 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        [DynamicData(nameof(PalindromeData), DynamicDataSourceType.Property)]
+        [DynamicData(nameof(GetPalindromeData), DynamicDataSourceType.Method)]
         public void IsPalindrome_NaturalNumber_ReturnRight(int n, bool expectedValue)
         {
             bool actualValue = MathUtils.IsPalindrome(n);
