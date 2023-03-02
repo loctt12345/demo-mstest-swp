@@ -39,7 +39,7 @@ namespace demo_mstest_swp
             int temp = n;
             while (n > 0)
             {
-                //Get the remainder by dividing the n with 10  
+                //Get the remainder by dividing the n with 10
                 remaineder = n % 10;
                 //multiply the sum with 10 and then add the remainder
                 sum = (sum * 10) + remaineder;
