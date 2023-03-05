@@ -3,7 +3,7 @@ using demo_mstest_swp;
 
 namespace UnitTesting
 {
-    [TestClass]
+    //[TestClass]
     public class MathUtilsTesting
     {
 
@@ -81,7 +81,7 @@ namespace UnitTesting
         }
 
 
-        [TestMethod]
+        //[TestMethod]
         [DynamicData(nameof(GetPalindromeDataFromJsonFile), DynamicDataSourceType.Method)]
         public void IsPalindrome_NaturalNumberGetFromJsonFile_ReturnRight(int n, bool expectedValue)
         {

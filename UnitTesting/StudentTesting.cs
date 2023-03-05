@@ -2,7 +2,7 @@ using demo_mstest_swp.Models;
 
 namespace UnitTesting
 {
-    //[TestClass]
+    [TestClass]
     public class StudentTesting
     {
 
