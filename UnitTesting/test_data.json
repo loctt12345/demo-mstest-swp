@@ -1,0 +1,18 @@
+[
+    {
+        "Input": 1,
+        "ExpectedOutput": false
+    },
+    {
+        "Input": 21112,
+        "ExpectedOutput": true
+    },
+    {
+        "Input": 21312,
+        "ExpectedOutput": true
+    },
+    {
+        "Input": 21114,
+        "ExpectedOutput": false
+    }
+]
