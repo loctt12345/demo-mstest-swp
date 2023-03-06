@@ -3,12 +3,12 @@ using demo_mstest_swp;
 
 namespace UnitTesting
 {
-    //[TestClass]
+    [TestClass]
     public class MathUtilsTesting
     {
 
         // Unit test for method MathUtils.GetSumNFirstNum
-       // [DataTestMethod]
+        [DataTestMethod]
         [DataRow(1, 1)]
         [DataRow(2, 3)]
         [DataRow(3, 6)]
@@ -58,7 +58,7 @@ namespace UnitTesting
         //   }
         //}
 
-        // [TestMethod]
+        [TestMethod]
         [DynamicData(nameof(GetPalindromeData), DynamicDataSourceType.Method)]
         public void IsPalindrome_NaturalNumber_ReturnRight(int n, bool expectedValue)
         {
@@ -81,7 +81,7 @@ namespace UnitTesting
         }
 
 
-        //[TestMethod]
+        [TestMethod]
         [DynamicData(nameof(GetPalindromeDataFromJsonFile), DynamicDataSourceType.Method)]
         public void IsPalindrome_NaturalNumberGetFromJsonFile_ReturnRight(int n, bool expectedValue)
         {
