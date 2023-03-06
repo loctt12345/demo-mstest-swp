@@ -15,27 +15,24 @@ namespace demo_mstest_swp
             return (Fibonacci_Recursion(i - 2) + Fibonacci_Recursion(i - 1));
         }
 
-        public long Fibonacci_Upgrade(int x)
+       public long Fibonacci_Upgrade(int x)
         {
-               
-            // 1 1
-            // 1 2
-            // 2 3
             if (x < 3) return 1;
-            long result = -9999999;
-            long before = 1;
-            long after = 1;
-            for (int i = 3;  i <= x; i ++)
+            //1 1
+            //1 2
+            //2 3
+            var result = -99999;
+            var before = 1;
+            var after = 1;
+            for(int i = 3; i <= x; i++)
             {
                 result = before + after;
                 before = after;
                 after = result;
 
             }
-
+            
             return result;
-
-
         }
     }
 }

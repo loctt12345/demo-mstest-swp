@@ -13,6 +13,7 @@ namespace UnitTesting
         [TestMethod]
         public void testFibonacciGivenRightArgumentRunsWell()
         {
+
             // 1 1 2 3 5 8
             FibonacciCalculator fibo = new FibonacciCalculator();
             Assert.AreEqual(1, fibo.Fibonacci_Recursion(1));
@@ -21,30 +22,20 @@ namespace UnitTesting
 
 
 
-
-            /*Assert.Equals(5, fibo.Fibonacci_Recursion(5));
-            Assert.Equals(8, fibo.Fibonacci_Recursion(6));*/
-
-
-
         }
+
+
         [TestMethod]
         public void testFibonacciUpgradeGivenRightArgumentRunsWell()
         {
+
             // 1 1 2 3 5 8
             FibonacciCalculator fibo = new FibonacciCalculator();
             Assert.AreEqual(1, fibo.Fibonacci_Upgrade(1));
             Assert.AreEqual(5, fibo.Fibonacci_Upgrade(5));
             Assert.AreEqual(8, fibo.Fibonacci_Upgrade(6));
 
-
-
-
-            /*Assert.Equals(5, fibo.Fibonacci_Recursion(5));
-            Assert.Equals(8, fibo.Fibonacci_Recursion(6));*/
-
-
-
         }
+
     }
 }
