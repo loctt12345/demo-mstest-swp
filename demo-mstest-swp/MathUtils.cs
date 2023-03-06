@@ -44,6 +44,7 @@ namespace demo_mstest_swp
                 //multiply the sum with 10 and then add the remainder
                 sum = (sum * 10) + remaineder;
                 //Get the quotient by dividing the n with 10 
+                //
                 n = n / 10;
             }
             if(sum == temp)  result = true; 
