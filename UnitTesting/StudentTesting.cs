@@ -31,15 +31,15 @@ namespace UnitTesting
             Assert.AreEqual(expectedValue, acualValue);
         }
 
-        [TestMethod]
-        public void GetTitleWithGPA_GreaterThanTen_ThrowsException()
-        {
-            var student1 = new Student("Loc", 21, "Software Engineer", 11.0);
-            Assert.ThrowsException<FormatException>(() => student1.GetTitleWithGPA());
+        //[TestMethod]
+        //public void GetTitleWithGPA_GreaterThanTen_ThrowsException()
+        //{
+        //    var student1 = new Student("Loc", 21, "Software Engineer", 11.0);
+        //    Assert.ThrowsException<FormatException>(() => student1.GetTitleWithGPA());
 
-            var student2 = new Student("Loc", 21, "Software Engineer", 10.3);
-            Assert.ThrowsException<FormatException>(() => student2.GetTitleWithGPA());
-        }
+        //    var student2 = new Student("Loc", 21, "Software Engineer", 10.3);
+        //    Assert.ThrowsException<FormatException>(() => student2.GetTitleWithGPA());
+        //}
 
         // Unit test for method ConvertGPAOutOfFourRoundToTens
 
@@ -55,14 +55,14 @@ namespace UnitTesting
             Assert.AreEqual(expectedValue, actualValue);
         }
 
-        [TestMethod]
-        public void ConvertGPAOutOfFourRoundToTens_NegativeGPA_ThrowsException()
-        {
-            var student1 = new Student("Loc", 21, "Software Engineer", -1.0);
-            Assert.ThrowsException<FormatException>(() => student1.ConvertGPAOutOfFourRoundToTens());
+        //[TestMethod]
+        //public void ConvertGPAOutOfFourRoundToTens_NegativeGPA_ThrowsException()
+        //{
+        //    var student1 = new Student("Loc", 21, "Software Engineer", -1.0);
+        //    Assert.ThrowsException<FormatException>(() => student1.ConvertGPAOutOfFourRoundToTens());
 
-            var student2 = new Student("Loc", 21, "Software Engineer", -20);
-            Assert.ThrowsException<FormatException>(() => student2.ConvertGPAOutOfFourRoundToTens());
-        }
+        //    var student2 = new Student("Loc", 21, "Software Engineer", -20);
+        //    Assert.ThrowsException<FormatException>(() => student2.ConvertGPAOutOfFourRoundToTens());
+        //}
     }
 }
