@@ -15,7 +15,7 @@ namespace UnitTesting
         [DataRow(15, 120)]
         [DataRow(47, 1128)]
         [DataRow(10, 55)]
-        [DataRow(10, 5050)]
+        [DataRow(100, 5050)]
         public void GetSumNFirstNum_NaturalNumber_ReturnRightValue(int n, int expectedValue)
         {
             var actualValue = MathUtils.GetSumNFirstNum(n);
